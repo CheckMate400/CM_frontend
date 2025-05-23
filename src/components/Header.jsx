@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 function Header() {
   return (
     <header>
@@ -9,7 +11,7 @@ function Header() {
         <div className="logo">👑 CheckMate</div>
       </div>
       <nav>
-        <a href="new_project.html" className="button">יצירת פרויקט חדש</a>
+        <Link to="/new" className="button">יצירת פרויקט חדש</Link>
         <a href="#">הפרויקטים שלי</a>
         <a href="#">קצת עלינו</a>
         <a href="#">צור קשר</a>
