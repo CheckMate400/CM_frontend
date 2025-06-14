@@ -13,17 +13,21 @@ function Dashboard() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    axios
-      .post(BACKEND_URL, { grades: dummyGrades })
-      .then((res) => {
-        setStats(res.data);
-        setLoading(false);
-      })
-      .catch((err) => {
-        console.error("Failed to fetch statistics", err);
-        setLoading(false);
-      });
-  }, []);
+  const fakeStats = {
+    average: 82.3,
+    median: 85,
+    std_dev: 10.1,
+    grade_distribution: {
+      "90-100": 3,
+      "80-89": 4,
+      "70-79": 2,
+      "60-69": 1,
+      "<60": 0,
+    },
+  };
+  setStats(fakeStats);
+  setLoading(false);
+}, []);
 
   if (loading) return <div className="text-white p-6">Loading...</div>;
   if (!stats) return <div className="text-red-500 p-6">No stats available</div>;
