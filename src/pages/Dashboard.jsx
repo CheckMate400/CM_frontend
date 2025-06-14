@@ -38,8 +38,9 @@ function Dashboard() {
   }));
 
   return (
-    <div className="min-h-screen bg-black text-green-400 p-6">
-      <h1 className="text-3xl font-bold mb-6">📊 Dashboard</h1>
+  <div className="min-h-screen bg-black text-green-400 p-6">
+    <h1 className="text-3xl font-bold mb-6">📊 Dashboard is loading</h1>
+    <pre>{JSON.stringify(stats, null, 2)}</pre>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
         <StatCard title="Average" value={stats.average} />
