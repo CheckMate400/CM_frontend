@@ -3,6 +3,7 @@ import Header from './components/Header';
 import Hero from './components/Hero';
 import Features from './components/Features';
 import NewProject from './pages/NewProject';
+import Dashboard from './pages/Dashboard'; // ✅ ADD THIS LINE
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           </>
         } />
         <Route path="/new" element={<NewProject />} />
+        <Route path="/dashboard" element={<Dashboard />} /> {/* ✅ ADD THIS LINE */}
       </Routes>
     </>
   );
