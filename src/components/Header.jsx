@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 function Header() {
   return (
@@ -12,6 +13,7 @@ function Header() {
       </div>
       <nav>
         <Link to="/new" className="button">יצירת פרויקט חדש</Link>
+        <Link to="/dashboard" className="text-green-400 hover:underline ml-4">Dashboard</Link>
         <a href="#">הפרויקטים שלי</a>
         <a href="#">קצת עלינו</a>
         <a href="#">צור קשר</a>
