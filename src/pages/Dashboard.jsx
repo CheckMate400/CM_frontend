@@ -28,6 +28,8 @@ function Dashboard() {
   setStats(fakeStats);
   setLoading(false);
 }, []);
+  console.log("📊 Stats:", stats);
+
 
   if (loading) return <div className="text-white p-6">Loading...</div>;
   if (!stats) return <div className="text-red-500 p-6">No stats available</div>;
@@ -50,7 +52,7 @@ function Dashboard() {
 
       <div className="bg-gray-900 p-4 rounded-2xl shadow-md">
         <h2 className="text-xl font-semibold mb-2">Grade Distribution</h2>
-        <PieChart width={400} height={300}>
+        {/* <PieChart width={400} height={300}>
           <Pie
             data={chartData}
             cx={200}
@@ -66,7 +68,7 @@ function Dashboard() {
           </Pie>
           <Tooltip />
           <Legend />
-        </PieChart>
+        </PieChart> */}
       </div>
     </div>
   );
